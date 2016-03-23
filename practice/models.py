@@ -86,7 +86,7 @@ class API(models.Model):
     res_status = models.CharField(max_length=10, choices=STATUS_LIST, help_text="Response Status")
     content_type = models.CharField(max_length=50, choices=CONTENT_LIST)
     response_body = RichTextField()
-    response_delay = models.CharField(max_length=20,blank=True, help_text="Response Delay In Seconds")
+    response_delay = models.CharField(max_length=20,blank=True,default="0", help_text="Response Delay In Seconds")
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
 
     def __str__(self):
