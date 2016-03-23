@@ -64,8 +64,8 @@ class Project(models.Model):
 
 class API(models.Model):
     METHOD_LIST = (
-        ('get', 'get'),
-        ('post', 'post'),
+        ('GET', 'GET'),
+        ('POST', 'POST'),
     )
     STATUS_LIST = (
         ('200', '200'),
